@@ -1,38 +1,152 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body,
+.navigation-bar {
+  background-color: #f8f5f0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navigation-icons span,
+.logo,
+.menu ol li,
+.rating {
+  color: #605d58;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.title h1,
+.title-para {
+  color: #373735;
+  font-family: "Oswald";
+}
+.scrolling-button {
+  border: 2px solid #373735;
+}
+.scrolling-button:hover {
+  background-color: #373735;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.menu ol li {
+  position: relative;
+  font-family: "Lato";
+}
+.menu ol li::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #605d58;
+  border-radius: 20px;
+  bottom: 0;
+  transition: width 0.3s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.menu ol li:hover::before {
+  width: 100%;
+}
+.guarantees {
+  width: calc(100% - 276px);
+  left: 272px;
+  gap: 10px;
+}
+.guarantee {
+  width: calc(100% / 4);
+}
+.guarantee-icon,
+.guarantee-title {
+  color: #373735;
+  font-family: "Oswald";
+}
+.guarantee-description {
+  color: #605d58;
+  font-family: "Lato";
+}
+.add-to-cart-button {
+  background-color: #a78364;
+  &:hover {
+    background-color: #987557;
   }
-  to {
-    transform: rotate(360deg);
+}
+.product-price {
+  color: #a78364;
+  font-family: "Oswald";
+}
+.wishlist-button {
+  right: -50px;
+  transition: 0.3s ease;
+}
+.image-section:hover .wishlist-button {
+  right: 8px;
+}
+.wishlist-button.active {
+  color: red;
+}
+.categories {
+  font-family: "Oswald";
+}
+.categories button.active {
+  background-color: #a78364;
+  color: white;
+}
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  border-radius: 50%;
+  background: linear-gradient(
+        0deg,
+        rgb(0 0 0/50%) 30%,
+        #0000 0 70%,
+        rgb(0 0 0/100%) 0
+      )
+      50%/8% 100%,
+    linear-gradient(90deg, rgb(0 0 0/25%) 30%, #0000 0 70%, rgb(0 0 0/75%) 0)
+      50%/100% 8%;
+  background-repeat: no-repeat;
+  animation: l23 1s infinite steps(12);
+}
+.loader::before,
+.loader::after {
+  content: "";
+  grid-area: 1/1;
+  border-radius: 50%;
+  background: inherit;
+  opacity: 0.915;
+  transform: rotate(30deg);
+}
+.loader::after {
+  opacity: 0.83;
+  transform: rotate(60deg);
+}
+@keyframes l23 {
+  100% {
+    transform: rotate(1turn);
   }
+}
+.r-img.active {
+  border: 2px solid red;
+}
+.product-description {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 15;
+}
+.product-title-price {
+  font-family: "Oswald";
+}
+.product-description {
+  font-family: "Lato";
+}
+.rest-images {
+  scrollbar-width: none;
+}
+.rest-images::-webkit-scrollbar {
+  display: none;
 }
