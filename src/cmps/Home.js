@@ -3,7 +3,6 @@ import Navbar from "./Navbar";
 import ProductCard from "./ProductCard";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { IoClose } from "react-icons/io5";
 
 function Home() {
   const btns = document.querySelectorAll(".category-button");

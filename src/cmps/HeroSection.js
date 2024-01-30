@@ -14,7 +14,6 @@ function HeroSection() {
           <div className="image-one w-64">
             <img
               src={plant}
-              alt="image-1"
               className="w-full"
               style={{ aspectRatio: "1/1.8" }}
             />
@@ -22,7 +21,6 @@ function HeroSection() {
           <div className="image-two w-64">
             <img
               src={ladder}
-              alt="image-2"
               className="w-full"
               style={{ aspectRatio: "1/1.2" }}
             />

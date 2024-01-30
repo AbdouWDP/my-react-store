@@ -1,4 +1,3 @@
-import image from "../element5-digital-2cwqJgtQ3D0-unsplash.jpg";
 import { FaStar } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
