@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import Navbar from "./Navbar";
 import { FaCartShopping } from "react-icons/fa6";
 import { motion } from "framer-motion";
+import Form from "./Form";
 
 const formVar = {
   hide: {
@@ -46,10 +47,11 @@ function ProductPage() {
           <div className="w-full aspect-auto cursor-pointer">
             <img
               className={`r-img w-full h-full object-contain rounded-lg ${
-                index == 0 ? "active" : ""
+                index === 0 ? "active" : ""
               }`}
               src={Object.keys(product).length >= 1 ? img : null}
               onClick={(e) => test(e)}
+              alt=""
             ></img>
           </div>
         </>

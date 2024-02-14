@@ -17,11 +17,7 @@ function ProductCard(props) {
           </div>
           <Link to={`/product/${product.id}`}>
             <div className="cursor-pointer w-full h-full">
-              <img
-                src={product.images[0]}
-                alt="Image"
-                className="w-full h-full"
-              />
+              <img src={product.images[0]} alt="" className="w-full h-full" />
             </div>
           </Link>
         </div>
